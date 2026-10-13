@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #c8102e, #8b0000);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.logo p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.social:hover {
+  transform: scale(1.05);
+}
+
+.tiktok {
+  background: #000;
+  border: 1px solid #fff;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  background: #1a1a1a;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-btn {
+  flex: 1;
+  min-width: 90px;
+  padding: 14px 10px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-btn.active {
+  color: #c8102e;
+  border-bottom-color: #c8102e;
+}
+
+/* Sections */
+.section {
+  display: none;
+  padding: 20px 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section.active {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+/* Cards */
+.card {
+  background: #1c1c1c;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid #2a2a2a;
+}
+
+.next-match {
+  text-align: center;
+  background: linear-gradient(145deg, #1c1c1c, #2a1515);
+  border: 1px solid #c8102e33;
+}
+
+.match-teams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.team strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.team span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.vs {
+  font-weight: 800;
+  color: #c8102e;
+  font-size: 1.3rem;
+}
+
+.match-info {
+  color: #c8102e;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.match-date {
+  color: #ccc;
+}
+
+/* Stats */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.stat .number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #c8102e;
+}
+
+/* Matches List */
+.matches-list, .predictions-list, .news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.match-item, .prediction-item, .news-item {
+  background: #1c1c1c;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #2a2a2a;
+}
+
+.match-item .teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.match-item .score {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #c8102e;
+}
+
+.match-item .meta {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.subtitle {
+  margin: 24px 0 12px;
+  color: #c8102e;
+  font-size: 1.1rem;
+}
+
+/* Predictions */
+.prediction-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prediction-bar {
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.prediction-bar .home {
+  background: #c8102e;
+}
+
+.prediction-bar .draw {
+  background: #666;
+}
+
+.prediction-bar .away {
+  background: #1e90ff;
+}
+
+.prediction-percentages {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* News */
+.news-item h4 {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.news-item p {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.news-item .date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 16px;
+  background: #111;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #c8102e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+}
